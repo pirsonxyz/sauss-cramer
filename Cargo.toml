@@ -1,8 +1,12 @@
 [package]
 name = "sauss-cramer"
+authors = ["Pirson Bethancourt"]
+homepage = "https://github.com/pirsonxyz/sauss-cramer"
+repository = "https://github.com/pirsonxyz/sauss-cramer"
 description = "Sauss-Cramer es una libreria que ayuda a resolver sistemas 2x2 y 3x3 de ecuaciones lineales, usando el metodo de reduccion de Crammer"
 version = "0.1.0"
 edition = "2021"
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
