@@ -58,6 +58,16 @@ pub fn solve_2_determinants(
 
     (x, y)
 }
+
+pub fn print_3_determinants_result(result: (f64, f64, f64)) {
+    println!("x = {}", result.0);
+    println!("y = {}", result.1);
+    println!("z = {}", result.2);
+}
+pub fn print_2_determinants_result(result: (f64, f64)) {
+    println!("x = {}", result.0);
+    println!("y = {}", result.1);
+}
 #[cfg(test)]
 mod tests {
     use super::{solve_2_determinants, solve_3_determinants};
