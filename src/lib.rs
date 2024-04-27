@@ -2,8 +2,8 @@
 //!
 //! [Reducción de Cramer.]: https://es.wikipedia.org/wiki/Regla_de_Cramer
 
-/// Resuelve una ecuación 3x3
-pub fn solve_3_determinants(
+/// Resuelve un sistema de ecuación 3x3.
+pub fn solve_3_variables(
     x1: f64,
     x2: f64,
     x3: f64,
@@ -35,15 +35,8 @@ pub fn solve_3_determinants(
 
     (x, y, z)
 }
-/// Resuelve una ecuación 2x2
-pub fn solve_2_determinants(
-    x1: f64,
-    y1: f64,
-    x2: f64,
-    y2: f64,
-    res_1: f64,
-    res_2: f64,
-) -> (f64, f64) {
+/// Resuelve un sistema de ecuación 2x2.
+pub fn solve_2_variables(x1: f64, y1: f64, x2: f64, y2: f64, res_1: f64, res_2: f64) -> (f64, f64) {
     let dp = x1 * y2;
     let ds = y1 * x2;
     let determinant = dp - ds;
@@ -58,35 +51,36 @@ pub fn solve_2_determinants(
 
     (x, y)
 }
-
+/// Imprime el resultado de la función solve_3_variables.
 pub fn print_3_determinants_result(result: (f64, f64, f64)) {
     println!("x = {}", result.0);
     println!("y = {}", result.1);
     println!("z = {}", result.2);
 }
-pub fn print_2_determinants_result(result: (f64, f64)) {
+/// Imprime el resultado de la función solve_2_variables.
+pub fn print_2_variables_result(result: (f64, f64)) {
     println!("x = {}", result.0);
     println!("y = {}", result.1);
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{solve_2_determinants, solve_3_determinants};
+    use super::{solve_2_variables, solve_3_variables};
     #[test]
     fn test_2_determinants() {
-        let result = solve_2_determinants(3.0, 4.0, 8.0, -9.0, 8.0, -77.0);
+        let result = solve_2_variables(3.0, 4.0, 8.0, -9.0, 8.0, -77.0);
         assert_eq!(result, (-4.0, 5.0));
     }
     #[test]
     fn test_3_determinants_2() {
-        let result = solve_3_determinants(
+        let result = solve_3_variables(
             9.0, -5.0, 7.0, 4.0, -3.0, 1.0, -6.0, 6.0, -3.0, -6.0, -5.0, -5.0,
         );
         assert_eq!(result, (-2.0, -3.0, -4.0));
     }
     #[test]
     fn test_3_determinants() {
-        let result = solve_3_determinants(
+        let result = solve_3_variables(
             5.0, 2.0, 1.0, -2.0, 5.0, -4.0, 1.0, -2.0, 3.0, 24.0, -14.0, 26.0,
         );
         assert_eq!(result, (3.0, -2.0, 5.0));
