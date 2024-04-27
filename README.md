@@ -10,13 +10,13 @@
 ### Ejemplo resolviendo un sistema 3x3.
 
 ```rust
-use sauss_cramer::{solve_3_determinants, print_3_determinants_result};
+use sauss_cramer::{solve_3_variables, print_3_variables_result};
 
 fn main() {
-    let result = solve_3_determinants(
+    let result = solve_3_variables(
         5.0, 2.0, 1.0, -2.0, 5.0, -4.0, 1.0, -2.0, 3.0, 24.0, -14.0, 26.0,
     );
 
-    print_3_determinants_result(result); // x = 3, y = 2, z = 5.
+    print_3_variables_result(result); // x = 3, y = 2, z = 5.
 }
 ```
