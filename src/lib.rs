@@ -52,7 +52,7 @@ pub fn solve_2_variables(x1: f64, y1: f64, x2: f64, y2: f64, res_1: f64, res_2: 
     (x, y)
 }
 /// Imprime el resultado de la función solve_3_variables.
-pub fn print_3_determinants_result(result: (f64, f64, f64)) {
+pub fn print_3_variables_result(result: (f64, f64, f64)) {
     println!("x = {}", result.0);
     println!("y = {}", result.1);
     println!("z = {}", result.2);
