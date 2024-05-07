@@ -5,7 +5,7 @@ homepage = "https://github.com/pirsonxyz/sauss-cramer"
 repository = "https://github.com/pirsonxyz/sauss-cramer"
 license = "MIT"
 description = "Sauss-Cramer es una librería que ayuda a resolver sistemas 2x2 y 3x3 de ecuaciones lineales, usando el método de reducción de Crammer."
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 readme = "README.md"
 
