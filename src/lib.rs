@@ -36,7 +36,7 @@ pub fn solve_3_variables(
     (x, y, z)
 }
 /// Resuelve un sistema de ecuación 2x2.
-pub fn solve_2_variables(x1: f64, y1: f64, x2: f64, y2: f64, res_1: f64, res_2: f64) -> (f64, f64) {
+pub fn solve_2_variables(x1: f64, x2: f64, y1: f64, y2: f64, res_1: f64, res_2: f64) -> (f64, f64) {
     let dp = x1 * y2;
     let ds = y1 * x2;
     let determinant = dp - ds;
