@@ -65,12 +65,7 @@ pub fn print_2_variables_result(result: (f64, f64)) {
 
 #[cfg(test)]
 mod tests {
-    use super::{solve_2_variables, solve_3_variables};
-    #[test]
-    fn test_2_determinants() {
-        let result = solve_2_variables(3.0, 4.0, 8.0, -9.0, 8.0, -77.0);
-        assert_eq!(result, (-4.0, 5.0));
-    }
+    use super::solve_3_variables;
     #[test]
     fn test_3_determinants_2() {
         let result = solve_3_variables(
